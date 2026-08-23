@@ -1,11 +1,28 @@
 {
   "name": "@daceytom2/vue-component-lib",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.0.4",
   "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "style": "./dist/index.css",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./style.css": "./dist/index.css"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc -b && vite build",
+    "build": "rimraf dist && vue-tsc -b && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -15,8 +32,10 @@
     "@types/node": "^24.13.3",
     "@vitejs/plugin-vue": "^6.0.8",
     "@vue/tsconfig": "^0.9.1",
+    "rimraf": "^3.0.0",
     "typescript": "~6.0.2",
     "vite": "^8.2.0",
+    "vite-plugin-dts": "^4.0.0",
     "vue-tsc": "^3.3.8"
   }
 }
