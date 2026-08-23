@@ -1,12 +1,4 @@
-import type { App } from 'vue';
 import SomeButton from './components/SomeButton.vue';
+import SomeCheckbox from './components/SomeCheckbox.vue';
 
-export { SomeButton };
-
-export function install(app: App) {
-  app.component('SomeButton', SomeButton);
-}
-
-export default {
-  install,
-};
+export { SomeButton, SomeCheckbox };

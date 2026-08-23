@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import SomeButton from "./components/SomeButton.vue";
+import SomeCheckbox from "./components/SomeCheckbox.vue";
 </script>
 
 <template>
@@ -11,6 +12,7 @@ import SomeButton from "./components/SomeButton.vue";
       <SomeButton variant="secondary">Secondary</SomeButton>
       <SomeButton variant="ghost" size="lg">Ghost</SomeButton>
       <SomeButton disabled>Disabled</SomeButton>
+      <SomeCheckbox>Click me</SomeCheckbox>
     </div>
   </main>
 </template>
