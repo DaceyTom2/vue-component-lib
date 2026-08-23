@@ -7,7 +7,7 @@ import SomeButton from "./components/SomeButton.vue";
     <h1>Vue Button Component</h1>
 
     <div class="button-row">
-      <SomeButton>Primary</SomeButton>
+      <SomeButton @some-focus="()=>{console.log('test123')}">Primary</SomeButton>
       <SomeButton variant="secondary">Secondary</SomeButton>
       <SomeButton variant="ghost" size="lg">Ghost</SomeButton>
       <SomeButton disabled>Disabled</SomeButton>

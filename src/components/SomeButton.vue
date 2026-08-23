@@ -14,6 +14,8 @@ withDefaults(
 
 const emit = defineEmits<{
   click: [event: MouseEvent];
+  
+  someFocus: [event: FocusEvent];
 }>();
 </script>
 
@@ -24,6 +26,7 @@ const emit = defineEmits<{
     :disabled="disabled"
     v-bind="$attrs"
     @click="emit('click', $event)"
+    @focusin="emit('someFocus', $event)"
   >
     <slot />
   </button>
