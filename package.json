@@ -1,7 +1,7 @@
 {
   "name": "@daceytom2/vue-component-lib",
   "private": false,
-  "version": "0.0.6",
+  "version": "0.0.7",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -29,10 +29,12 @@
     "vue": "^3.5.40"
   },
   "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
     "@types/node": "^24.13.3",
     "@vitejs/plugin-vue": "^6.0.8",
     "@vue/tsconfig": "^0.9.1",
     "rimraf": "^3.0.0",
+    "tailwindcss": "^4.3.3",
     "typescript": "~6.0.2",
     "vite": "^8.2.0",
     "vite-plugin-dts": "^4.0.0",

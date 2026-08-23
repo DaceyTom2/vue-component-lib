@@ -21,8 +21,15 @@ const emit = defineEmits<{
 
 <template>
   <button
-    class="btn"
-    :class="[`btn--${variant}`, `btn--${size}`]"
+    class="inline-flex cursor-pointer items-center justify-center rounded-[10px] border-0 font-semibold transition duration-150 ease-in-out hover:-translate-y-px disabled:cursor-not-allowed disabled:opacity-60"
+    :class="{
+      'px-3.5 py-2 text-xs': size === 'sm',
+      'px-[1.1rem] py-3 text-[0.95rem]': size === 'md',
+      'px-[1.4rem] py-3.5 text-base': size === 'lg',
+      'bg-blue-500 text-white shadow-[0_8px_20px_rgba(59,130,246,0.25)]': variant === 'primary',
+      'bg-slate-200 text-slate-900': variant === 'secondary',
+      'border border-blue-600/35 bg-transparent text-blue-600': variant === 'ghost',
+    }"
     :disabled="disabled"
     v-bind="$attrs"
     @click="emit('click', $event)"
@@ -31,61 +38,3 @@ const emit = defineEmits<{
     <slot />
   </button>
 </template>
-
-<style scoped>
-.btn {
-  appearance: none;
-  border: none;
-  border-radius: 10px;
-  font-weight: 600;
-  cursor: pointer;
-  transition:
-    transform 0.15s ease,
-    box-shadow 0.15s ease,
-    opacity 0.15s ease;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.btn:hover:not(:disabled) {
-  transform: translateY(-1px);
-}
-
-.btn:disabled {
-  cursor: not-allowed;
-  opacity: 0.6;
-}
-
-.btn--sm {
-  padding: 0.5rem 0.875rem;
-  font-size: 0.75rem;
-}
-
-.btn--md {
-  padding: 0.75rem 1.1rem;
-  font-size: 0.95rem;
-}
-
-.btn--lg {
-  padding: 0.9rem 1.4rem;
-  font-size: 1rem;
-}
-
-.btn--primary {
-  background: #3b82f6;
-  color: white;
-  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.25);
-}
-
-.btn--secondary {
-  background: #e2e8f0;
-  color: #0f172a;
-}
-
-.btn--ghost {
-  background: transparent;
-  color: #2563eb;
-  border: 1px solid rgba(37, 99, 235, 0.35);
-}
-</style>

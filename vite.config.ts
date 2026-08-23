@@ -1,10 +1,12 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import tailwindcss from '@tailwindcss/vite'
 import dts from 'vite-plugin-dts'
 
 export default defineConfig({
   plugins: [
     vue(),
+    tailwindcss(),
     dts({
       include: ['src/**/*.ts', 'src/**/*.vue'],
       outDir: 'dist',
