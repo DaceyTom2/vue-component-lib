@@ -21,14 +21,14 @@ const emit = defineEmits<{
 
 <template>
   <button
-    class="inline-flex cursor-pointer items-center justify-center rounded-[10px] border-0 font-semibold transition duration-150 ease-in-out hover:-translate-y-px disabled:cursor-not-allowed disabled:opacity-60"
+    class="tvc:inline-flex tvc:cursor-pointer tvc:items-center tvc:justify-center tvc:rounded-[10px] tvc:border-0 tvc:font-semibold tvc:transition tvc:duration-150 tvc:ease-in-out tvc:hover:-translate-y-px tvc:disabled:cursor-not-allowed tvc:disabled:opacity-60"
     :class="{
-      'px-3.5 py-2 text-xs': size === 'sm',
-      'px-[1.1rem] py-3 text-[0.95rem]': size === 'md',
-      'px-[1.4rem] py-3.5 text-base': size === 'lg',
-      'bg-blue-500 text-white shadow-[0_8px_20px_rgba(59,130,246,0.25)]': variant === 'primary',
-      'bg-slate-200 text-slate-900': variant === 'secondary',
-      'border border-blue-600/35 bg-transparent text-blue-600': variant === 'ghost',
+      'tvc:px-3.5 tvc:py-2 tvc:text-xs': size === 'sm',
+      'tvc:px-[1.1rem] tvc:py-3 tvc:text-[0.95rem]': size === 'md',
+      'tvc:px-[1.4rem] tvc:py-3.5 tvc:text-base': size === 'lg',
+      'tvc:bg-blue-500 tvc:text-white tvc:shadow-[0_8px_20px_rgba(59,130,246,0.25)]': variant === 'primary',
+      'tvc:bg-slate-200 tvc:text-slate-900': variant === 'secondary',
+      'tvc:border tvc:border-blue-600/35 tvc:bg-transparent tvc:text-blue-600': variant === 'ghost',
     }"
     :disabled="disabled"
     v-bind="$attrs"

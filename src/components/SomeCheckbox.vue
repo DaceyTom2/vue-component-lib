@@ -19,11 +19,11 @@ const emit = defineEmits<{
 
 <template>
   <label
-    class="inline-flex cursor-pointer items-center gap-2 text-slate-900"
-    :class="{ 'cursor-not-allowed opacity-60': disabled }"
+    class="tvc:inline-flex tvc:cursor-pointer tvc:items-center tvc:gap-2 tvc:text-slate-900"
+    :class="{ 'tvc:cursor-not-allowed tvc:opacity-60': disabled }"
   >
     <input
-      class="size-[1.125rem] accent-blue-600"
+      class="tvc:size-[1.125rem] tvc:accent-blue-600"
       type="checkbox"
       :checked="props.modelValue"
       :disabled="disabled"
